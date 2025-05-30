@@ -12,6 +12,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run EventCatalog Governance Action
-        uses: eventcatalog/governance-action@main # IMPORTANT: Change this path!
+        uses: event-catalog/governance-action@main # IMPORTANT: Change this path!
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
