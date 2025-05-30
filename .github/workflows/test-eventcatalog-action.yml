@@ -20,3 +20,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           catalog_directory: my-catalog
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          failure_threshold: '50'
