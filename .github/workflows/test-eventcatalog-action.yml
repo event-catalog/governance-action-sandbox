@@ -1,11 +1,11 @@
-name: Test EventCatalog Governance Action
+name: EventCatalog Governance Action
 
 on:
   pull_request:
     types: [opened, synchronize]
 
 jobs:
-  test_action:
+  governance:
     runs-on: ubuntu-latest
     # Add this permissions block:
     permissions:
