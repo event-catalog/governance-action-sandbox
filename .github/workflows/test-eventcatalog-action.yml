@@ -19,4 +19,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           catalog_directory: my-catalog
-          openai_api_key: ${{ secrets.OPEN_API_KEY }}
+          OPEN_API_KEY: ${{ secrets.OPEN_API_KEY }}
