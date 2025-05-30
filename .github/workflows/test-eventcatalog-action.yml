@@ -2,16 +2,19 @@ name: Test EventCatalog Governance Action
 
 on:
   pull_request:
-    types: [opened, synchronize] # Trigger on PR creation or updates
+    types: [opened, synchronize]
 
 jobs:
   test_action:
     runs-on: ubuntu-latest
+    # Add this permissions block:
+    permissions:
+      pull-requests: write # Required to allow the action to post comments on PRs
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Run EventCatalog Governance Action
-        uses: event-catalog/governance-action@main # IMPORTANT: Change this path!
+        uses: event-catalog/governance-action@main # Or your specific user/repo@branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
