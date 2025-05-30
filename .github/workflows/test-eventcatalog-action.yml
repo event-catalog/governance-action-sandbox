@@ -1,17 +1,17 @@
- name: Test EventCatalog Governance Action
+name: Test EventCatalog Governance Action
 
-    on:
-      pull_request:
-        types: [opened, synchronize] # Trigger on PR creation or updates
+on:
+  pull_request:
+    types: [opened, synchronize] # Trigger on PR creation or updates
 
-    jobs:
-      test_action:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v4
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-          - name: Run EventCatalog Governance Action
-            uses: eventcatalog/governance-action@main # IMPORTANT: Change this path!
-            with:
-              github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run EventCatalog Governance Action
+        uses: eventcatalog/governance-action@main # IMPORTANT: Change this path!
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
