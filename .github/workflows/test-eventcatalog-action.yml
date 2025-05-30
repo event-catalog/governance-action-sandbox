@@ -18,3 +18,4 @@ jobs:
         uses: event-catalog/governance-action@main # Or your specific user/repo@branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          catalog_directory: my-catalog
