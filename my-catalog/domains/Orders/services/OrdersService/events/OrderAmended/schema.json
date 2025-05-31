@@ -24,12 +24,8 @@
               "format": "uuid",
               "description": "The unique identifier of the product."
             },
-            "productName": {
-              "type": "string",
-              "description": "The name of the product."
-            },
             "oldQuantity": {
-              "type": "integer",
+              "type": "string",
               "description": "The original quantity of the product ordered."
             },
             "newQuantity": {

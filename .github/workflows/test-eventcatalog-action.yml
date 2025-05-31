@@ -17,7 +17,8 @@ jobs:
       - name: Run EventCatalog Governance Action
         uses: event-catalog/governance-action@main # Or your specific user/repo@branch
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          task: schema_review
           catalog_directory: my-catalog
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           failure_threshold: '50'
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
