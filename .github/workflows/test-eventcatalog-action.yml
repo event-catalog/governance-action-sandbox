@@ -17,8 +17,13 @@ jobs:
       - name: Run EventCatalog Governance Action
         uses: event-catalog/governance-action@main # Or your specific user/repo@branch
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           task: schema_review
           catalog_directory: my-catalog
           failure_threshold: '50'
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # api_key: ${{ secrets.OPENAI_API_KEY }}
+          provider: google
+          model: gemini-2.5-flash-preview-04-17
+          api_key: ${{ secrets.GOOGLE_API_KEY }}
+
+      
