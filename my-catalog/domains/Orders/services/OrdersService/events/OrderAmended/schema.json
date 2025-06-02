@@ -19,11 +19,6 @@
         "items": {
           "type": "object",
           "properties": {
-            "productId": {
-              "type": "string",
-              "format": "uuid",
-              "description": "The unique identifier of the product."
-            },
             "oldQuantity": {
               "type": "string",
               "description": "The original quantity of the product ordered."
