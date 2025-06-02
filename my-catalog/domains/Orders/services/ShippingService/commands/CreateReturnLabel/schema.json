@@ -10,9 +10,13 @@
                 "shipmentId": {
                     "type": "string",
                     "description": "Unique identifier for the shipment"
+                },
+                "orderId": {
+                    "type": "string",
+                    "description": "Order ID associated with the shipment"
                 }
             },
-            "required": ["shipmentId"]
+            "required": ["shipmentId", "orderId"]
         }
     },
     "required": ["CreateReturnLabel"]
