@@ -21,9 +21,9 @@ jobs:
           task: schema_review
           catalog_directory: my-catalog
           failure_threshold: '50'
-          # api_key: ${{ secrets.OPENAI_API_KEY }}
-          provider: google
-          model: gemini-2.5-flash-preview-04-17
-          api_key: ${{ secrets.GOOGLE_API_KEY }}
+          api_key: ${{ secrets.OPENAI_API_KEY }}
+          provider: openai
+          model: o4-mini
+          # api_key: ${{ secrets.GOOGLE_API_KEY }}
 
       
