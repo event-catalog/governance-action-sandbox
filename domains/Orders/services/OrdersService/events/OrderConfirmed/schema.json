@@ -32,6 +32,16 @@
               "type": "integer",
               "description": "The quantity of the product ordered."
             },
+            "unitPrice": {
+              "type": "number",
+              "format": "float",
+              "description": "The price per unit of the product."
+            },
+            "totalPriceHere": {
+              "type": "number",
+              "format": "float",
+              "description": "The total price for this order item (quantity * unitPrice)."
+            },
             "totalPrice": {
               "type": "number",
               "format": "float",
