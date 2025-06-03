@@ -4,7 +4,7 @@
   "name" : "Employee",
   "fields" : [
      { "name" : "Name" , "type" : "string" },
-     { "name" : "LastName" , "type" : "string" },
+     { "name" : "LastName" , "type" : "string", default: "" },
      { "name" : "Age" , "type" : "int" },
      { "name" : "Town" , "type" : "string" },
   ]
