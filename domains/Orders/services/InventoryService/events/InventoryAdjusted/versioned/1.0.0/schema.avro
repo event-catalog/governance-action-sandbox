@@ -5,6 +5,7 @@
   "fields" : [
      { "name" : "Name" , "type" : "string" },
      { "name" : "LastName" , "type" : "string", default: "" },
+     { "name" : "ASL" , "type" : "string" },
      { "name" : "Age" , "type" : "int" },
      { "name" : "Town" , "type" : "string" },
   ]
