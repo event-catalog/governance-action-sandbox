@@ -24,6 +24,7 @@ jobs:
           api_key: ${{ secrets.OPENAI_API_KEY }}
           provider: openai
           model: o4-mini
+          license_key: ${{ secrets.EVENT_CATALOG_LICENSE_KEY }}
           # catalog_directory: my-catalog
           # api_key: ${{ secrets.GOOGLE_API_KEY }}
 
