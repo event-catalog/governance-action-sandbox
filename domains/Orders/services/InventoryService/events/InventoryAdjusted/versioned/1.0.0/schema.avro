@@ -7,7 +7,6 @@
      { "name" : "LastName" , "type" : "string", default: "" },
      { "name" : "ASL" , "type" : "string" },
      { "name" : "Age" , "type" : "int" },
-     { "name" : "Age2" , "type" : "int" },
      { "name" : "Town" , "type" : "string" },
   ]
 }
