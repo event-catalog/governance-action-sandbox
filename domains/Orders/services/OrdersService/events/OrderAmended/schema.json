@@ -27,11 +27,6 @@
               "type": "number",
               "format": "float",
               "description": "The price per unit of the product."
-            },
-            "totalPrice": {
-              "type": "number",
-              "format": "float",
-              "description": "The total price for this order item (newQuantity * unitPrice)."
             }
           },
           "required": ["productId", "productName", "oldQuantity", "newQuantity", "unitPrice", "totalPrice"]
