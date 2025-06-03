@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  governance:
+  schema-reviewer:
     runs-on: ubuntu-latest
     # Add this permissions block:
     permissions:
@@ -18,6 +18,7 @@ jobs:
         uses: event-catalog/governance-action@main # Or your specific user/repo@branch
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          license_key: ${{ secrets.EVENT_CATALOG_LICENSE_KEY }}
           task: schema_review
           # catalog_directory: my-catalog
           failure_threshold: '50'
