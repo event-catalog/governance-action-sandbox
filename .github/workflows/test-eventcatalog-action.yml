@@ -10,20 +10,21 @@ jobs:
     # Add this permissions block:
     permissions:
       pull-requests: write # Required to allow the action to post comments on PRs
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run EventCatalog Governance Action
-        uses: event-catalog/governance-action@main # Or your specific user/repo@branch
+      - name: Run schema review checks for EventCatalog
+        uses: event-catalog/github-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           task: schema_review
-          # catalog_directory: my-catalog
           failure_threshold: '50'
           api_key: ${{ secrets.OPENAI_API_KEY }}
           provider: openai
           model: o4-mini
+          # catalog_directory: my-catalog
           # api_key: ${{ secrets.GOOGLE_API_KEY }}
 
       
