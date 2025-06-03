@@ -13,5 +13,5 @@
             "description": "Identifier for the associated order"
         }
     },
-    "required": ["shipmentId", "orderId"]
+    "required": ["shipmentId"]
 }
