@@ -23,10 +23,6 @@
               "type": "string",
               "description": "The original quantity of the product ordered."
             },
-            "newQuantity": {
-              "type": "integer",
-              "description": "The new quantity of the product ordered."
-            },
             "unitPrice": {
               "type": "number",
               "format": "float",
