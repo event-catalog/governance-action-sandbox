@@ -19,7 +19,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           task: schema_review
-          catalog_directory: my-catalog
+          # catalog_directory: my-catalog
           failure_threshold: '50'
           api_key: ${{ secrets.OPENAI_API_KEY }}
           provider: openai
