@@ -8,11 +8,6 @@
         "format": "uuid",
         "description": "The unique identifier of the order that was amended."
       },
-      "userId": {
-        "type": "string",
-        "format": "uuid",
-        "description": "The unique identifier of the user who placed the order."
-      },
       "amendedItems": {
         "type": "array",
         "description": "A list of items that were amended in the order, each containing product details and updated quantities.",
