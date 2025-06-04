@@ -8,6 +8,7 @@ message AmendedItem {
   string productName = 2;   // The name of the product.
   int32 oldQuantity = 3;    // The original quantity of the product ordered.
   int32 newQuantity = 4;    // The new quantity of the product ordered.
+  double unitPrice = 5; // The price per unit of the product.
   double totalPrice = 6;    // The total price for this order item (newQuantity * unitPrice).
 }
 

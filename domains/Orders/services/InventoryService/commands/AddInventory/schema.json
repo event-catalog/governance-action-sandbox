@@ -18,9 +18,13 @@
         "description": "The unique identifier of the warehouse where the inventory is being added."
       },
       "timestamp": {
-        "type": "string",
+        "type": "integer",
         "format": "date-time",
         "description": "The date and time when the inventory was added."
+      },
+      "unitPrice": {
+        "type": "number",
+        "description": "The price per unit of the product being added to the inventory."
       }
     },
     "required": ["productId", "quantity", "warehouseId", "timestamp"],
