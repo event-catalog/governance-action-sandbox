@@ -17,7 +17,7 @@ jobs:
           task: schema_review
           failure_threshold: 50
           provider: openai
-          model: gpt-4-turbo
+          model: gpt-4o
           api_key: ${{ secrets.OPENAI_API_KEY }}
           license_key: ${{ secrets.EVENT_CATALOG_LICENSE_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
