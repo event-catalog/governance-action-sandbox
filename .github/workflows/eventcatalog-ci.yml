@@ -11,8 +11,8 @@ jobs:
       pull-requests: write 
 
     steps:
-        uses: actions/checkout@v4
-        uses: event-catalog/github-action@main
+      - uses: actions/checkout@v4
+      - uses: event-catalog/github-action@main
         with:
           task: schema_review
           failure_threshold: 50
