@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.example.events;
+
+// Represents a single amended item in an order
+message AmendedItem {
+  string productId = 1;     // The unique identifier of the product.
+  string productName = 2;   // The name of the product.
+  int32 oldQuantity = 3;    // The original quantity of the product ordered.
+  int32 newQuantity = 4;    // The new quantity of the product ordered.
+  double unitPrice = 5;     // The price per unit of the product.
+  double totalPrice = 6;    // The total price for this order item (newQuantity * unitPrice).
+}
+
+// Represents an event where an order was amended
+message OrderAmendedEvent {
+  string orderId = 1;                   // The unique identifier of the order that was amended.
+  string userId = 2;                    // The unique identifier of the user who placed the order.
+  repeated AmendedItem amendedItems = 3; // A list of items that were amended in the order.
+  string orderStatus = 4;              // The current status of the order after the amendment.
+  double totalAmount = 5;              // The total amount of the order after the amendment.
+  string timestamp = 6;                // The date and time when the order was amended, in ISO 8601 format.
+}
