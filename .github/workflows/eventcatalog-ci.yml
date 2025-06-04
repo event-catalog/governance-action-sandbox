@@ -1,11 +1,11 @@
-name: EventCatalog Governance Action
+name: EventCatalog Action
 
 on:
   pull_request:
     types: [opened, synchronize]
 
 jobs:
-  governance:
+  schema_review:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write 
@@ -20,7 +20,7 @@ jobs:
           model: gpt-4o
           api_key: ${{ secrets.OPENAI_API_KEY }}
           license_key: ${{ secrets.EVENT_CATALOG_LICENSE_KEY }}
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           # catalog_directory: my-catalog
           # api_key: ${{ secrets.GOOGLE_API_KEY }}
 
