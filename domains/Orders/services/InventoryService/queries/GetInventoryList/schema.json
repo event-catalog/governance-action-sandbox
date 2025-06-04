@@ -23,6 +23,10 @@
           "inStock": {
             "type": "boolean",
             "description": "Filter items that are currently in stock (true) or out of stock (false)."
+          },
+          "productName": {
+            "type": "string",
+            "description": "Filter items by product name."
           }
         },
         "additionalProperties": false

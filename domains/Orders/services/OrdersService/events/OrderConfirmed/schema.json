@@ -28,8 +28,12 @@
               "type": "string",
               "description": "The name of the product."
             },
+            "productDescription": {
+              "type": "string",
+              "description": "The description of the product."
+            },
             "quantity": {
-              "type": "integer",
+              "type": "string",
               "description": "The quantity of the product ordered."
             },
             "unitPrice": {
@@ -40,7 +44,7 @@
             "totalPrice": {
               "type": "number",
               "format": "float",
-              "description": "The total price for this order item (quantity * unitPrice)."
+              "description": "The total price for this order item (quantity * unitPrice). Please note that this is the total price for the item, not the total price for the order."
             }
           },
           "required": ["productId", "productName", "quantity", "unitPrice", "totalPrice"]
