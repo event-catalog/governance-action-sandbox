@@ -11,9 +11,7 @@ jobs:
       pull-requests: write 
 
     steps:
-      - name: Checkout code
-
-      - name: Run schema review checks for EventCatalog
+        uses: actions/checkout@v4
         uses: event-catalog/github-action@main
         with:
           task: schema_review
@@ -24,4 +22,6 @@ jobs:
           license_key: ${{ secrets.EVENT_CATALOG_LICENSE_KEY }}
           # github_token: ${{ secrets.GITHUB_TOKEN }}
           # catalog_directory: my-catalog
-          # api_key: ${{ secrets.GOOGLE_API_KEY }
+          # api_key: ${{ secrets.GOOGLE_API_KEY }}
+
+      
