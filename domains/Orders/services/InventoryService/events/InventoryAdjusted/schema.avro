@@ -4,7 +4,6 @@
   "name" : "Employee",
   "fields" : [
      { "name" : "Name", "type" : "string" },
-     { "name" : "Age", "type" : "int" },
      { "name" : "Position", "type" : "string" },
      { "name" : "JoinDate", "type" : "string", "logicalType": "date" }
   ]
