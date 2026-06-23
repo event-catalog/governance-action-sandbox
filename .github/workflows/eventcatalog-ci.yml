@@ -5,23 +5,16 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  schema_review:
+  eventcatalog:
     runs-on: ubuntu-latest
     permissions:
-      pull-requests: write 
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
-      - uses: event-catalog/github-action@main
+      - uses: event-catalog/eventcatalog-actions@main
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
-          task: schema_review
-          failure_threshold: 50
-          provider: openai
-          model: gpt-4o
-          api_key: ${{ secrets.OPENAI_API_KEY }}
-          license_key: ${{ secrets.EVENT_CATALOG_LICENSE_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # catalog_directory: my-catalog
-          # api_key: ${{ secrets.GOOGLE_API_KEY }}
-
-      
+          catalog-repo: event-catalog/governance-action-sandbox
+          model: openai/gpt-4.1-mini
