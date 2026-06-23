@@ -16,5 +16,5 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
-          catalog-repo: event-catalog/governance-action-sandbox
+          catalog-repo: boyney123/starter-catalog
           model: openai/gpt-4.1-mini
